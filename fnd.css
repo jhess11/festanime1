@@ -1,0 +1,153 @@
+/* 1. Configuración General y Tipografía */
+:root {
+    --color-principal: #6a0dad; /* Morado vibrante [cite: 85, 217] */
+    --color-secundario: #ff007f; /* Rosado [cite: 218] */
+    --color-acento: #ffcc00; /* Amarillo para botones [cite: 88, 219] */
+    --color-fondo: #f4f4f4; /* Gris muy claro [cite: 87, 220] */
+    --color-texto: #333; /* Texto oscuro para legibilidad [cite: 111] */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Tipografía legible [cite: 90, 142] */
+    line-height: 1.6;
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+}
+
+/* 2. Navegación */
+header {
+    background-color: var(--color-principal);
+    color: white;
+    padding: 1rem 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+/* 3. Hero Section (Sección Principal) */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('anime-banner.jpg'); /* Imagen llamativa [cite: 38] */
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 3.5rem; /* Nombre grande y destacado [cite: 77, 93] */
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.cta-button {
+    background-color: var(--color-acento); /* Color de acento para destacar [cite: 79, 88] */
+    color: black;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px;
+    margin-top: 20px;
+    transition: transform 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: scale(1.1); /* Efecto interactivo */
+}
+
+/* 4. Secciones y Espaciado */
+section {
+    padding: 60px 10%; /* Espaciado adecuado entre secciones [cite: 97, 99] */
+}
+
+h2 {
+    color: var(--color-principal);
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    border-bottom: 3px solid var(--color-secundario);
+    display: inline-block;
+}
+
+/* 5. Cuadrícula de Actividades */
+.actividades-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px; /* Separación entre tarjetas [cite: 100] */
+}
+
+article {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    border-top: 5px solid var(--color-secundario); /* Consistencia visual [cite: 130] */
+}
+
+/* 6. Tabla de Cronograma */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+}
+
+th, td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background-color: var(--color-principal);
+    color: white;
+}
+
+/* 7. Footer */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+    margin-top: 40px;
+}
+
+/* 8. Diseño Adaptable (Mobile First) [cite: 231, 232] */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    nav ul {
+        display: none; /* Simplificar para móviles [cite: 114] */
+    }
+}
